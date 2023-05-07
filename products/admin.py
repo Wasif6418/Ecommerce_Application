@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from products.models import Category, ProductImage, Product
+from products.models import Category, ProductImage, Product, ColorVariant, SizeVariant
 
 admin.site.register(Category)
 
@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
 #  list_display = ['product_name' , 'price' ]
     inlines = [ProductImageAdmin]
 
-"""
+
 @admin.register(ColorVariant)
 class ColorVariantAdmin(admin.ModelAdmin):
     list_display = ['color_name' , 'price']
@@ -24,7 +24,7 @@ class SizeVariantAdmin(admin.ModelAdmin):
 
     model = SizeVariant
 
-"""
+
 admin.site.register(Product ,ProductAdmin)
 
 
