@@ -13,7 +13,7 @@ class Profile(BaseModel):
     profile_image = models.ImageField(upload_to = 'profile')
 
 
-"""
+
 @receiver(post_save , sender = User)
 def  send_email_token(sender , instance , created , **kwargs):
     try:
@@ -25,7 +25,6 @@ def  send_email_token(sender , instance , created , **kwargs):
 
     except Exception as e:
         print(e)
-"""
 
 
 
